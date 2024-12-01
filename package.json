@@ -2,23 +2,83 @@
   "name": "cal-system-tut",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "type": "module",
+  "browser list": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "biome check src",
+    "format": "biome check --write src",
+    "git": "git config --global core.hooksPath .githooks"
   },
   "dependencies": {
+    "@conform-to/react": "^1.2.2",
+    "@conform-to/zod": "^1.2.2",
+    "@hookform/resolvers": "^3.9.1",
+    "@internationalized/date": "^3.6.0",
+    "@neondatabase/serverless": "^0.10.4",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-dropdown-menu": "^2.1.2",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-select": "^2.1.2",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.1",
+    "@radix-ui/react-tooltip": "^1.1.4",
+    "@t3-oss/env-nextjs": "^0.11.1",
+    "@tabler/icons-react": "^3.23.0",
+    "@uploadthing/react": "^7.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "drizzle-orm": "^0.36.4",
+    "drizzle-zod": "^0.5.1",
+    "iron-session": "^8.0.4",
+    "next": "15.0.3",
+    "next-themes": "^0.4.3",
     "react": "19.0.0-rc-66855b96-20241106",
+    "react-aria": "^3.36.0",
+    "react-aria-components": "^1.5.0",
+    "react-day-picker": "^8.10.1",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "react-hook-form": "^7.53.2",
+    "react-stately": "^3.34.0",
+    "sonner": "^1.7.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
+    "uploadthing": "^7.3.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@biomejs/biome": "^1.9.4",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.28.1",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
